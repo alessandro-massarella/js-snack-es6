@@ -17,15 +17,16 @@ const arrayObj = [
 ];
 
 const newArrayObj = arrayObj.map((element) => {
-// creo un array con tutti i caratteri, poi creo una variabile con un numero random che poi assocerò all'indice dell'array di caratteri. Successivamente assegnerò il valore/lettera alla key position di ogni oggetto. 
+// creo un array con tutti i caratteri, poi creo una variabile con un numero random che poi assocerò all'indice dell'array di caratteri. Successivamente assegnerò il valore/lettera alla key position di ogni oggetto.
   const caratteri = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
   let randomNumb = Math.floor(Math.random() * 26);
 
+  const newElement = {...element, position: caratteri[randomNumb]};
+
   console.log('lettera random' + caratteri[randomNumb])
+  // element.position = caratteri[randomNumb];
 
-  element.position = caratteri[randomNumb];
-
-  return element;
+  return newElement;
 })
 console.log(newArrayObj);
