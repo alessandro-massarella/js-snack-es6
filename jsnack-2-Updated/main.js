@@ -33,3 +33,8 @@ console.log(giant, cannondale, merida);
 
 const biciLeggera = `La bici più leggera è: ${lightBike.nome}`;
 console.log(biciLeggera);
+
+document.getElementById('bici').innerHTML = `
+<li>Nome: ${lightBike.nome}</li>
+<li>Peso: ${lightBike.peso}</li>
+`
